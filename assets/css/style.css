@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* =============== SETTINGS GENERAL =============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/* =============== SETTINGS BASIC =============== */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =============== SETTINGS ROOT =============== */
+:root {
+    
+    /* COLORS */
+    --var-color: 270;
+    --color-first: hsl(var(--var-color), 69%, 61%);
+    --color-second: hsl(var(--var-color), 60%, 52%);
+    --color-title: hsl(var(--var-color), 8%, 15%);
+    --color-text: hsl(var(--var-color), 8%, 45%);
+    --color-text-light: hsl(var(--var-color), 8%, 65%);
+    --color-input: hsl(var(--var-color), 70%, 96%);
+    --color-default: white;
+
+    /* FONT SIZE */
+    --font-size-bigger: 2rem;
+    --font-size-big: 1.5rem;
+    --font-size-normal: 1rem;
+    --font-size-small: .813rem;
+    --font-size-smaller: .750rem;
+
+    /* BOLD */
+    --font-weight-semibold: 500;
+    --font-weight-bold: 600;
+
+    /* MARGIN AND PADDING */
+    --mp-0-25: .25rem;
+    --mp-0-5: .5rem;
+    --mp-0-75: .75rem;
+    --mp-1: 1rem;
+    --mp-1-5: 1.5rem;
+    --mp-2: 2rem;
+    --mp-2-5: 2.5rem;
+    --mp-3: 3rem;
+}
+
+/* =============== REUSABLE CSS =============== */
+section {
+    padding: 2rem 0;
+}
+  
+.c-section-title {
+    font-size: var(--font-size-big);
+    padding: var(--mp-1) 0;
+    text-align: center;
+    color: var(--color-title);
+} 
+  
+.c-section-subtitle {
+    display: block;
+    font-size: var(--font-size-normal);
+    padding: var(--mp-1) 0;
+}
+  
+.c-section-title, 
+.c-section-subtitle {
+    text-align: center;
+}
+  
+.c-section-p{
+    text-align: justify;
+    font-size: var(--font-size-normal);
+    padding: var(--mg-1-5) 0;
+    color: var(--color-text);
+}
+
+/* =============== BODY STYLE =============== */
+
+/* MENU NAVIGATION */
+.navigation {
+    width: 100%;
+    height: 50px;
+}
+
+.c-menu {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0 var(--mp-1);
+    z-index: 1;
+}
+
+.c-logo-menu {
+    width: 100px;
+}
+
+.c-container-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: var(--mp-1) 0;
+    text-align: center;
+    transition: 0.8s;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-default)
+}
+
+.c-container-list {
+    padding-bottom: var(--mp-1);
+}
+
+.c-container-link {
+    color: var(--color-text);
+}
+
+.c-container-link:hover {
+    color: var(--color-first);
+}
+
+.c-container-toggle{
+    cursor: pointer;
+    font-size: var(--font-size-big);
+}
+
+.c-container-toggle:hover{
+    color: var(--color-first);
+}
+
+.c-active-link{
+    position: relative;
+}
+  
+.c-active-link::before{
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: var(--color-first);
+    border-radius: 50%;
+}
+
+.c-show-menu{
+    top: 60px;
+}
